@@ -2,9 +2,9 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
   extends: [
-    'airbnb',
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
@@ -34,7 +34,15 @@ module.exports = {
     ],
     'jsx-a11y/no-noninteractive-element-interactions': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
-    'react/jsx-one-expression-per-line': 0,
-    'comma-dangle': ['error', { functions: 'ignore' }],
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'ignore',
+        objects: 'ignore',
+        imports: 'never',
+        exports: 'never',
+        functions: 'ignore',
+      },
+    ],
   },
 };

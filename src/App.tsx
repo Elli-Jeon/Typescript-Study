@@ -1,23 +1,17 @@
 import React from 'react';
+import Greetings from 'Greetings';
+import Counter from 'Counter';
 
 function App() {
+  const onClick = (name: string) => {
+    console.log(`${name} says hello`);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div>asdads</div>
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Greetings name="Sangwoo" onClick={onClick}></Greetings>;
+      <Counter></Counter>
+    </>
   );
 }
 
